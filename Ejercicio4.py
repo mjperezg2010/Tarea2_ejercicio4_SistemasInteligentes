@@ -1,24 +1,30 @@
+#Ejercicio 4 tarea, Martin José Pérez Gálvez
+
 import random
 from tabulate import tabulate
 
 
 
 #Funciones
+#Funciones principal
 def funcion(x,y):
     return ((x + 2*y - 7)*(x + 2*y - 7))+((2*x + y - 5)*(2*x + y - 5))
 
+#Derivadas parciales
 def dxfuncion(x,y):
     return 10*x + 8*y - 34
 
 def dyfuncion(x,y):
     return 8*x + 10*y - 38
 
+#Gradientes
 def desGradientex(a,x,y):
     return x - (a*dxfuncion(x,y))
 
 def desGradientey(a,x,y):
     return y - (a*dyfuncion(x,y))
 
+#Calcular valor minimo
 def minimum_value(x,y):
 
     #Primera ronda de iteraciones α = 0.2
@@ -59,12 +65,6 @@ def minimum_value(x,y):
         y = yfinal
 
     return tabla
-
-
-
-
-
-
 
 
 def main():
